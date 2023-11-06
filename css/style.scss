@@ -1,0 +1,224 @@
+*{
+    font-family: Roboto;
+}
+
+  
+:root{
+    --main-bg-color:#EAEAEA;
+    --main-primary-color:#9356DC;
+    --main-secondary-color:#FF79DA;
+    --main-tr-color:#99E2D0;
+}
+body{
+    margin: 0;
+    counter-reset: counter-info 0;
+}
+@counter-style counter-info {
+    prefix: "Nombre ";
+    separator: ".";
+    
+  }
+.info{
+    counter-increment: counter-info 1;
+}
+.info::before{
+    content: counter(counter-info) " ";
+}
+.section-title{
+    margin: 0;
+}
+.section-subtitle{
+    margin: 0;
+}
+.main-container{
+}
+.header-menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-menu-logo{
+    padding: 14px 89px 13px 89px;
+    display: flex;
+    height: 63px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+
+}
+.header-menu-logo img{
+    width: 100%;
+    height: 36px;
+    padding: 0px 19px 0px 16px;
+
+}
+.localisation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 17px;
+    background-color: var(--main-bg-color);
+}
+
+.location-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--Background, #F6F6F6);
+    padding: 40px;
+}
+
+.location .main-title{
+    width: 275px;
+    height: auto;
+    text-align: center;
+    
+}
+
+.location .main-subtitle{
+    width: 315px;
+    height: auto;
+    text-align: center;
+    
+}
+
+.btn-primary{
+    margin-top: 30px;
+    width: 218px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 25px;
+    background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+    border: var(--main-bg-color);
+    /* Shadow/Button */
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+    color: var(--White, #FFF);
+    text-align: center;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.fonctionnement{
+    padding: 30px 20px 30px 20px;
+}
+.fonctionnement-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 322.486px;
+    height: 72.379px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--Background, #F6F6F6);
+
+    /* Shadow/Instructions */
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.restaurant{
+    background: var(--Background, #F6F6F6);
+    padding: 30px 17px 30px 17px;
+}
+.card img{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px 15px 0 0;
+}
+.badge{
+    position: absolute;
+    background: var(--Green, #99E2D0);
+    width: 80px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 266px;
+    margin-top: 12px;
+}
+.badge p{
+    color: var(--Green-Font, #008766);
+
+}
+.card-icon{
+    margin-right: 20px;
+}
+.card{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+/* Shadow/Card */
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.restaurant-card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    
+}
+
+.restaurant-card a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #000;
+    
+}
+.card-descr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    margin-left: 14px;
+}
+
+.card-title h3{
+    margin-bottom: 0;
+
+}
+.card-title p{
+    margin-top: 5px;
+}
+
+.footer{
+    background: var(--Grey, #353535);
+    color: var(--White, #FFF);
+    padding: 22px 25px;
+}
+
+.footer-menu ul li a{
+    text-decoration: none;
+    color: var(--White, #FFF);
+    
+}
+
+.footer-menu ul{
+    list-style-type: none;
+    padding: 0;
+    
+}
+.footer-img img{
+    width: 139px;
+    height: 27px;
+}
