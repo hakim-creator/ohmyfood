@@ -1,6 +1,13 @@
 *{
     font-family: Roboto;
 }
+    $main-primary-color:#9356DC;
+    $main-bg-color:#EAEAEA;
+    $main-secondary-color:#FF79DA;
+    $main-tr-color:#99E2D0;
+:root{
+    
+}
 
 #loader {
     position: fixed;
@@ -10,7 +17,7 @@
     height: 100%;
     z-index: 9999;
     background: white;
-    animation: fadeOut 4s forwards; /* Ajoutez cette ligne */
+    animation: fadeOut 4s forwards; 
   
     &::before {
       content: "";
@@ -24,7 +31,7 @@
       border: 6px solid #f4f4f4;
       border-top: 6px solid #3498db;
       border-radius: 50%;
-      animation: spin 2s linear infinite;
+      animation: spin 1s linear infinite;
     }
   }
   
@@ -33,18 +40,11 @@
     100% { transform: rotate(360deg); }
   }
   
-  /* Ajoutez cette animation */
   @keyframes fadeOut {
     0% { opacity: 1; }
     100% { opacity: 0; }
   }
   
-:root{
-    --main-bg-color:#EAEAEA;
-    --main-primary-color:#9356DC;
-    --main-secondary-color:#FF79DA;
-    --main-tr-color:#99E2D0;
-}
 body{
     margin: 0;
     counter-reset: counter-info 0;
@@ -54,15 +54,12 @@ body{
     separator: ".";
     
   }
-.info{
-    counter-increment: counter-info 1;
-}
-.info::before{
-    content: counter(counter-info) " ";
-}
+
+
 .section-title{
     margin: 0;
 }
+
 .section-subtitle{
     margin: 0;
 }
@@ -98,7 +95,7 @@ body{
     width: 100%;
     justify-content: center;
     gap: 17px;
-    background-color: var(--main-bg-color);
+    background-color: $main-bg-color;
 }
 
 .location-title{
@@ -130,7 +127,7 @@ body{
     cursor: pointer;
     border-radius: 25px;
     background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-    border: var(--main-bg-color);
+    border: $main-bg-color;
     /* Shadow/Button */
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 
@@ -153,6 +150,8 @@ body{
 }
 
 .info{
+    counter-increment: counter-info 1;
+
     display: flex;
     align-items: center;
     gap: 20px;
@@ -161,9 +160,23 @@ body{
     flex-shrink: 0;
     border-radius: 20px;
     background: var(--Background, #F6F6F6);
-
+    padding-left: 20px;
     /* Shadow/Instructions */
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    
+}
+
+.info::before{
+    content: counter(counter-info) " ";
+    position: absolute;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $main-primary-color;
+    color: white;
+    text-align: center;
+    line-height: 20px;
 }
 
 .restaurant{
@@ -178,7 +191,7 @@ body{
 }
 .badge{
     position: absolute;
-    background: var(--Green, #99E2D0);
+    background: $main-tr-color;
     width: 80px;
     height: 29px;
     display: flex;
