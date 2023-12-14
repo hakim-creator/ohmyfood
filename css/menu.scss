@@ -89,6 +89,16 @@
             & h4{
                 margin: 0;
             }
+            .check{
+                width: auto;
+                height: 100%;
+                display: none;
+                &__valide{
+                    margin: 0;
+                    height: 100%;
+                }
+            }
+
         }
     
     }

@@ -1,3 +1,6 @@
+@import "header.scss";
+@import "footer.scss";
+
 *{
     font-family: Roboto;
 }
@@ -9,42 +12,10 @@
     
 }
 
-#loader {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: white;
-    animation: fadeOut 4s forwards; 
-  
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 60px;
-      height: 60px;
-      margin: -30px 0 0 -30px;
-      border: 6px solid #f4f4f4;
-      border-top: 6px solid #3498db;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-  }
+
   
   
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  @keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-  }
+
   
 body{
     margin: 0;
@@ -69,28 +40,7 @@ body{
 /////////////////////////////
 
 
-.header {
-    &__menu {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        width: 100%;
-        &--logo {
-            padding: 14px 89px 13px 89px;
-            display: flex;
-            height: 63px;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-            width: 100%;
-            img {
-                width: 200px;
-                height: 36px;
-                padding: 0px 19px 0px 16px;
-            }
-        }
-    }
-}
+
 
 .location {
     // ...
@@ -170,6 +120,9 @@ body{
                 padding-left: 20px;
                 /* Shadow/Instructions */
                 box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+                &__icon:hover{
+                    color: #9356DC;
+                }
             }
             .info::before{
                 content: counter(counter-info) " ";
@@ -181,6 +134,7 @@ body{
                 color: white;
                 text-align: center;
                 line-height: 20px;
+                margin-left: -30px;
             }
             
             
@@ -208,25 +162,28 @@ body{
                 flex-direction: column;
             /* Shadow/Card */
                 box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-                &__badge {
-                    position: absolute;
-                    background: $main-tr-color;
-                    width: 80px;
-                    height: 29px;
+                &__badge{
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-left: 266px;
-                    margin-top: 12px;
-                    & p {
-                        color: var(--Green-Font, #008766);
+                    justify-content: flex-end;
+                    margin-right: 20px;
+                    &--new {
+                        position: absolute;
+                        background: $main-tr-color;
+                        width: 80px;
+                        height: 29px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 12px;
+                        & p {
+                            color: var(--Green-Font, #008766);
+                        }
                     }
                 }
+                
                 &__img {
-                    object-fit: cover;
-                    width: 100%;
+
                     height: 200px;
-                    border-radius: 15px 15px 0 0;
                 }
                 &__descr {
                     display: flex;
@@ -265,99 +222,32 @@ body{
     }
 }
 
-.footer {
-    background: var(--Grey, #353535);
-    color: var(--White, #FFF);
-    padding: 22px 25px;
-    &__container {
-        // ...
-        &--img {
-            // ...
-            & img {
-                width: 139px;
-                height: 27px;
-            }
-        }
-        &--menu {
-            // ...
-            & ul {
-                list-style-type: none;
-                padding: 0;
-            }
-            ul li a {
-                text-decoration: none;
-                color: var(--White, #FFF);
-            }
-        }
-    }
-}
+
 
 //Responsive Tablette 1024px
 
 @media (min-width:769px) and (max-width: 1024px){
-    .header {
-        &__menu {
-            display: flex;
-            flex-wrap: wrap;
-            &--logo {
-                padding: 14px 89px 13px 89px;
-                display: flex;
-                height: 63px;
-                justify-content: center;
-                align-items: center;
-                box-shadow:none;
 
-            }
-        }
-    }
     
     .location {
         // ...
         &__section {
             // ...
             &--localisation {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                width: 100%;
-                justify-content: center;
-                gap: 17px;
-                background-color: $main-bg-color;
+
             }
             &--title {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background: var(--Background, #F6F6F6);
-                padding: 40px;
+
                 &--main-title {
                     width: auto;
-                    height: auto;
-                    text-align: center;
+
                 }
                 &--main-subtitle {
                     width: auto;
-                    height: auto;
-                    text-align: center;
+
                 }
                 & .btn-primary{
-                    margin-top: 30px;
-                    width: 218px;
-                    height: 50px;
-                    cursor: pointer;
-                    border-radius: 25px;
-                    background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-                    border: $main-bg-color;
-                    /* Shadow/Button */
-                    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-                
-                    color: var(--White, #FFF);
-                    text-align: center;
-                
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: normal;
+
                 }
             }
         }
@@ -371,15 +261,10 @@ body{
         
             // ...
             &__info {
-                display: flex;
+
                 flex-direction:row;
-                align-items: center;
-                gap: 30px;
+
                 .info {
-    
-                    display: flex;
-                    align-items: center;
-                    gap: 20px;
                     width: 250px;
        
                 }
@@ -390,66 +275,47 @@ body{
     }
     
     .restaurant {
-        background: var(--Background, #F6F6F6);
         padding: 30px 90px;
         &__section {
             &--title {
                 // ...
             }
             &--card {
-                display: flex;
-                flex-wrap: wrap;
+
                 gap: 0;
                 row-gap: 50px;
                 justify-content:space-around;
                 margin-top: 28px;
                 .card {
                     width: 40%;
-                    height: auto;
-                    border-radius: 15px;
-                    background: #FFF;
-                    display: flex;
-                    flex-direction: column;
-                /* Shadow/Card */
-                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-                    &__badge {
-                        position: absolute;
-                        background: $main-tr-color;
-                        width: 80px;
-                        height: 29px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-left: 266px;
-                        margin-top: 12px;
-                        & p {
-                            color: var(--Green-Font, #008766);
+
+                    &__badge{
+
+                        &--new {
+
+                            & p {
+                            }
                         }
                     }
                     &__img {
-                        object-fit: cover;
-                        width: 100%;
-                        height: 200px;
-                        border-radius: 15px 15px 0 0;
+
                     }
                     &__descr {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center; 
+
                     }
                     &__icon {
-                        margin-right: 20px;
+
                         & .fa-heart:hover{
                             
                         }
                     }
                     &__title {
-                        margin-left: 14px;
+
                         & h3 {
-                            margin-bottom: 0;
+
                         }
                         & p {
-                            margin-top: 5px;
+
                         }
                     }
                     & img {
@@ -460,62 +326,20 @@ body{
                     }
                 }
                 & a {
-                    width: 100%;
-                    height: 100%;
-                    text-decoration: none;
-                    color: #000;
+
                 }
             }
         }
     }
     
-    .footer {
-        background: var(--Grey, #353535);
-        color: var(--White, #FFF);
-        padding: 22px 25px;
-        &__container {
-            // ...
-            &--img {
-                // ...
-                & img {
-                    width: 139px;
-                    height: 27px;
-                }
-            }
-            &--menu {
-                // ...
-                & ul {
-                    list-style-type: none;
-                    padding: 0;
-                }
-                ul li a {
-                    text-decoration: none;
-                    color: var(--White, #FFF);
-                }
-            }
-        }
-    }
+
 }
 
 
-//Responsive Desktop 1440px
+//Responsive Desktop
 
 @media (min-width:1025px){
-    .header {
-        &__menu {
-            display: flex;
-            flex-wrap: wrap;
-            &--logo {
-                padding: 14px 89px 13px 89px;
-                display: flex;
-                height: 63px;
-                justify-content: center;
-                align-items: center;
-                box-shadow:none;
 
-            }
-        }
-    }
     
     .location {
         // ...
@@ -597,40 +421,23 @@ body{
     }
     
     .restaurant {
-        background: var(--Background, #F6F6F6);
         padding: 30px 90px;
         &__section {
             &--title {
                 // ...
             }
             &--card {
-                display: flex;
-                flex-wrap: wrap;
+
                 gap: 0;
                 row-gap: 50px;
                 justify-content:space-around;
                 margin-top: 28px;
                 .card {
                     width: 40%;
-                    height: auto;
-                    border-radius: 15px;
-                    background: #FFF;
-                    display: flex;
-                    flex-direction: column;
-                /* Shadow/Card */
-                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-                    &__badge {
-                        position: absolute;
-                        background: $main-tr-color;
-                        width: 80px;
-                        height: 29px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-left: 266px;
-                        margin-top: 12px;
-                        & p {
-                            color: var(--Green-Font, #008766);
+                    &__badge{
+
+                        &--new {
+
                         }
                     }
                     &__img {
@@ -676,34 +483,5 @@ body{
         }
     }
     
-    .footer {
-        background: var(--Grey, #353535);
-        color: var(--White, #FFF);
-        padding: 22px 25px;
-        &__container {
-            
-            &--img {
-                // ...
-                & img {
-                    width: 139px;
-                    height: 27px;
-                }
-            }
-            &--menu {
-                // ...
-                & ul {
-                    list-style-type: none;
-                    padding: 0;
-                    display: flex;
-                    flex-direction: row;
-                    gap: 20px;
-                    justify-content: center;
-                }
-                ul li a {
-                    text-decoration: none;
-                    color: var(--White, #FFF);
-                }
-            }
-        }
-    }
+
 }
