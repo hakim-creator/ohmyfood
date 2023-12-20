@@ -26,27 +26,7 @@
 }
 
 @media (min-width:769px) and (max-width: 1024px){
-    .footer {
 
-        &__container {
-            // ...
-            &--img {
-                // ...
-                & img {
-
-                }
-            }
-            &--menu {
-                // ...
-                & ul {
-
-                }
-                ul li a {
-
-                }
-            }
-        }
-    }
 }
 
 @media (min-width:1025px){
@@ -61,12 +41,7 @@
 //            align-items: center;
 //            direction: rtl;
 //            grid-template-columns: 1fr 2fr 1fr;
-            &--img {
-                // ...
-                & img {
 
-                }
-            }
             &--menu {
                 margin-right: 140px;
 //                direction: ltr;
@@ -77,9 +52,7 @@
                     gap: 20px;
                     justify-content: center;
                 }
-                ul li a {
 
-                }
             }
         }
     }

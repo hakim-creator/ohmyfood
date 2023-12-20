@@ -60,13 +60,9 @@
             line-height: normal;
         }
     
-        &--page{
+
     
-        }
-    
-        &--icon{
-    
-        }
+
     }
 
     .food{
@@ -116,6 +112,9 @@
             }
             &--descr{
                 padding: 15px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap
             }
             &--price{
                 display: flex;
@@ -155,19 +154,6 @@
 
 }
 
-.footer{
-
-    &__container{
-
-        &--img{
-
-        }
-
-        &--menu{
-
-        }
-    }
-}
 
 
 
@@ -183,9 +169,7 @@
         &--img{
             width: 100%;
             height: 138%;
-            & img{
-    
-            }
+
     
         }
     }
@@ -204,40 +188,14 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
-            &--page{
+
         
-            }
-        
-            &--icon{
-        
-            }
+
         }
     
-        &__food{
-        
+
     
-            &--title{
-    
-                & h4{
-    
-                }
-            }
-            &--card{
-        
-    
-                & p{
-                    
-                }
-                & h4{
-    
-                }
-            }
-        
-        }
-    
-        .btn-primary{
-    
-        }
+
     
     }
     
@@ -245,15 +203,7 @@
     
     .footer{
         margin-top: 50px;
-        &__container{
-            &--img{
-    
-            }
-    
-            &--menu{
-                
-            }
-        }
+
 }
 
 
@@ -269,9 +219,7 @@
     &--img{
         width: 100%;
         height: 138%;
-        & img{
 
-        }
 
     }
 }
@@ -290,40 +238,12 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-        &--page{
-    
-        }
-    
-        &--icon{
-    
-        }
-    }
 
-    &__food{
-    
-
-        &--title{
-
-            & h4{
-
-            }
-        }
-        &--card{
-    
-
-            & p{
-                
-            }
-            & h4{
-
-            }
-        }
     
     }
 
-    .btn-primary{
 
-    }
+
 
 }
 
@@ -331,13 +251,5 @@
 
 .footer{
     margin-top: 50px;
-    &__container{
-        &--img{
 
-        }
-
-        &--menu{
-            
-        }
-    }
 }
