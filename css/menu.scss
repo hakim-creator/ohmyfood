@@ -51,6 +51,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        & h2{
+            color: var(--Black, #101010);
+            font-family: Shrikhand;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
     
         &--page{
     
@@ -61,42 +69,76 @@
         }
     }
 
-    &__food{
+    .food{
     
         display: flex;
         flex-direction: column;
         gap: 15px;
-        &--title{
+        &__title{
             margin-top: 40px;
             & h4{
                 margin: 0;
-                text-decoration: underline;
-                text-decoration-color: #99E2D0;
+                border-bottom: 2px solid;
+                width: 40px;
+                border-bottom-color: #99E2D0;
+                text-transform: uppercase;
+                font-weight: 300;
             }
         }
-        &--card{
-    
-            padding: 15px;
+        &__card{
+            overflow: hidden;
             display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
             border-radius: 15.043px;
             background: var(--White, #FFF);
             box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
             & p{
                 margin: 0;
+                overflow: hidden;
+                color: #000;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-family: Roboto;
+                font-size: 15.043px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
             }
             & h4{
                 margin: 0;
+                overflow: hidden;
+                color: #000;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
             }
-            .check{
-                width: auto;
-                height: 100%;
-                display: none;
-                &__valide{
-                    margin: 0;
-                    height: 100%;
+            &--descr{
+                padding: 15px;
+            }
+            &--price{
+                display: flex;
+                align-items: flex-end;
+                margin-left: auto;
+                padding: 15px;
+            }
+            &--check{
+                background-color: #99E2D0;
+                padding: 24px;
+                margin-right: -72px;
+                margin-left: 10px;
+                border-radius: 0 15px 15px 0;
+                .fa-check{
+                    background: white;
+                    border-radius: 50%;
+                    padding: 4px 5px;
+                    color: #99E2D0;
                 }
+                
+            }
+            &:hover .food__card--check{
+                margin-right: 0;
             }
 
         }
@@ -107,14 +149,7 @@
         display: flex;
         justify-content: center;
         margin-top: 40px;
-        .btn-primary{
-            width: 186px;
-            height: 50px;
-            color: #FFF;
-            border-radius: 25px;
-            background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-    
-        }
+
     }
 
 

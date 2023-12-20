@@ -1,0 +1,44 @@
+.loader{
+    $animation-duration: 2s;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    background-color: #EAEAEA;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    opacity: 1;
+    animation: disloader 200ms $animation-duration forwards;
+
+    transform-origin: bottom;
+    &::after{
+        content: "";
+        height: 100px;
+        width: 100px;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #9356DC;
+        border-left: 5px solid transparent;
+        border-bottom: 5px solid #9356DC;
+        border-radius: 50%;
+        animation: spinner 600ms infinite ease-in-out;
+    }
+
+}
+@keyframes disloader {
+    from{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(0);
+    }
+}
+
+@keyframes spinner{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
