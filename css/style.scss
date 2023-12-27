@@ -1,8 +1,8 @@
-@import url(/css/header.css);
-@import url(/css/footer.css);
-@import url(/css/heart.css);
-@import url(/css/btn.css);
-@import url(/css/loader.css);
+@import "header.scss";
+@import "footer.scss";
+@import "menu.scss";
+@import "btn.scss";
+@import "loader.scss";
 *{
     font-family: Roboto;
 }
