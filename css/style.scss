@@ -3,6 +3,7 @@
 @import "header.scss";
 @import "heart.scss";
 @import "loader.scss";
+@import "menu.scss";
 *{
     font-family: Roboto;
 }
@@ -279,7 +280,7 @@ body{
 
 //Responsive Desktop
 
-@media (min-width:1025px){
+@media (min-width:1025px) and (max-width:1440px){
 
     
     .location {
